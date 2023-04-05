@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple D&D Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     
 
     <div class="runner"></div>
@@ -15,7 +16,24 @@
     <div class="gameboard"></div>
 
 
-    <script src="script.js"></script>
-    <script src="spawner.js"></script>
+    <div class="end_window" style="display: none;">
+
+        <div class="title">Игра окончена</div>
+
+        <div class="text"></div>
+
+        <div class="restartLabel">
+            <div class="droppable" id="restart">
+            
+            </div>
+        </div>
+
+        <div class="instr">Поместите объект в форму, чтобы перезапустить игру.</div>
+    </div>
+
+    <div class="score"></div>
+
+    <script src="dragAndDropComponent.js"></script>
+    <script src="spawner.js?v=3"></script>
 </body>
 </html>

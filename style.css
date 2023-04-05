@@ -17,13 +17,83 @@ body{
     position: absolute;
 }
 
-.droppable{
-    height: 165px;
+#dng{
+    height: 136px;
     width: 50px;
     background-color: rgb(238, 206, 22);
 }
 
-.clear{
-    height: 150px;
+#clear{
+    height: 120px;
     width: 50px;
+}
+
+
+.end_window{
+
+    margin: auto;
+    margin-top: 10%;
+
+    height: 300px;
+    width: 600px;
+
+    background-color: white;
+    border-radius: 20px;
+}
+
+.restartLabel{
+
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: rgb(241, 241, 241);
+
+    display: flex;
+    align-items: center;
+    
+    margin-left: 80%;
+}
+
+#restart{
+    height: 40px;
+    width: 40px;
+
+    margin: auto;
+
+    background-color: rgb(212, 212, 212);
+    border-radius: 50px;
+}
+
+
+.score{
+    position: absolute;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+    padding-left: 20px;
+}
+
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.instr{
+    color: rgb(179, 179, 179);
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+
+    padding-top: 14%;
+    padding-left: 41%;
 }
