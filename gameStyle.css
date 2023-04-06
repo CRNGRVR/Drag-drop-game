@@ -1,0 +1,42 @@
+body{
+    background-color: blueviolet;
+}
+
+/* Игровой объект */
+.runner{
+    height: 40px;
+    width: 40px;
+
+    background-color: rgb(255, 132, 0);
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+
+/* Цельная преграда с пустотой(группа прямоугольников) */
+.obstacle{
+    position: absolute;
+}
+
+/* Элемент преграды(прямоугольник) */
+#dng{
+    height: 136px;
+    width: 50px;
+    background-color: rgb(238, 206, 22);
+}
+
+/* Элемент преграды(пустота) */
+#clear{
+    height: 120px;
+    width: 50px;
+}
+
+
+/* Счётчик очков в углу */
+.score{
+    position: absolute;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}

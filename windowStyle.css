@@ -1,34 +1,3 @@
-body{
-    background-color: blueviolet;
-}
-
-.runner{
-    height: 40px;
-    width: 40px;
-
-    background-color: rgb(255, 132, 0);
-    border-radius: 50px;
-
-    cursor: pointer;
-}
-
-
-.obstacle{
-    position: absolute;
-}
-
-#dng{
-    height: 136px;
-    width: 50px;
-    background-color: rgb(238, 206, 22);
-}
-
-#clear{
-    height: 120px;
-    width: 50px;
-}
-
-
 .end_window{
 
     margin: auto;
@@ -40,6 +9,7 @@ body{
     background-color: white;
     border-radius: 20px;
 }
+
 
 .restartLabel{
 
@@ -54,6 +24,7 @@ body{
     margin-left: 80%;
 }
 
+/* Поле для перезагрузки */
 #restart{
     height: 40px;
     width: 40px;
@@ -64,13 +35,6 @@ body{
     border-radius: 50px;
 }
 
-
-.score{
-    position: absolute;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-}
 
 .text{
     font-family: Arial, Helvetica, sans-serif;
