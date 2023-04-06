@@ -9,7 +9,7 @@ let score = 0
 let scoreBoard = document.querySelector('.score')
 
 //  Уровень сложности
-let difficulty = 0
+let difficulty = 1
 
 let isGameEnded = false
 
@@ -26,9 +26,9 @@ function sheduleMovement(){
 function difficultyToMS(level){
 
     switch(difficulty){
-        case 0: return 10 
-        case 1: return 5
-        case 2: return 2
+        case 1: return 10 
+        case 2: return 5
+        case 3: return 2
     }
 }
 
@@ -97,6 +97,9 @@ function gameEnd(reason){
     let descr = document.querySelector('.descr')
     descr.innerHTML = reason
 
+    let diff = document.querySelector('.diff')
+    diff.innerHTML = `Сложность: ${difficulty}`
+
     clearInterval(idSpawnInterval)
     clearInterval(idMoveInterval)
     clearTimeout(idDelay)
@@ -105,7 +108,7 @@ function gameEnd(reason){
     shift = 0
     board.innerHTML = ""
     score = 0
-    difficulty = 0
+    difficulty = 1
 
     scoreBoard.innerHTML = ""
 }
