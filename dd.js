@@ -28,6 +28,13 @@ function mouseup(event){
         clearInterval(mouseDownID)
         mouseDownID = -1
     }
+
+    //  Если игрок отпускает мышь, столкновения не считаются.
+    //  Так не интересно
+    if(!isGameEnded){
+      isGameEnded = true
+      gameEnd("Причина: игрок отпустил мышь")
+    } 
 }
 
 

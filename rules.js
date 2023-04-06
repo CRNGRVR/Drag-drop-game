@@ -2,6 +2,7 @@
 //  Нужны для остановки игрового процесса.
 let idSpawnInterval = null
 let idMoveInterval = null
+let idDelay = null
 
 //  Очки, заработанные игроком при прохождении преград
 let score = 0
@@ -10,6 +11,7 @@ let scoreBoard = document.querySelector('.score')
 //  Уровень сложности
 let difficulty = 0
 
+let isGameEnded = false
 
 startGame()
 
@@ -33,7 +35,7 @@ function difficultyToMS(level){
 
 function startGame(){
     idSpawnInterval = setInterval(spawn, 1000)
-    setTimeout(sheduleMovement, 5000)
+    idDelay = setTimeout(sheduleMovement, 5000)
 
     //  Это должно было быть возвращением объекта на место
     //  но эта шляпа не хочет работать
@@ -45,6 +47,7 @@ function startGame(){
 function restart(){
 
     endWindow.style.display = "none"
+    isGameEnded = false
     startGame()
 }
 
@@ -52,7 +55,7 @@ function restart(){
 
 //  Столкновение с препядствием
 function collisionObstacle(){
-    gameEnd()
+    gameEnd("Причина: столкновение")
 }
 
 //  Прохождение препятствия
@@ -82,20 +85,24 @@ function pass(){
 
 let endWindow = document.querySelector(".end_window")
 
-function gameEnd(){
+function gameEnd(reason){
+
+    isGameEnded = true
 
     endWindow.style.display = 'block'
 
     let txt = document.querySelector('.text')
     txt.innerHTML = `Очки: ${score}`
 
+    let descr = document.querySelector('.descr')
+    descr.innerHTML = reason
 
     clearInterval(idSpawnInterval)
     clearInterval(idMoveInterval)
+    clearTimeout(idDelay)
 
     pos = 0
     shift = 0
-    obstacles = []
     board.innerHTML = ""
     score = 0
     difficulty = 0
